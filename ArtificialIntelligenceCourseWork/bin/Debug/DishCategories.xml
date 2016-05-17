@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDishCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DishCategory>
+    <id>1</id>
+    <name>Гарнир</name>
+  </DishCategory>
+  <DishCategory>
+    <id>2</id>
+    <name>Салаты</name>
+  </DishCategory>
+  <DishCategory>
+    <id>3</id>
+    <name>Мясо</name>
+  </DishCategory>
+</ArrayOfDishCategory>

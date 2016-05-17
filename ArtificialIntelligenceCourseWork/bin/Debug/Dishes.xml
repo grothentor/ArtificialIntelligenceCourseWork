@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDish xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Dish>
+    <id>1</id>
+    <name>говядина отварная</name>
+    <category_id>3</category_id>
+    <calories>254</calories>
+  </Dish>
+  <Dish>
+    <id>2</id>
+    <name>шашлык из свинины</name>
+    <category_id>3</category_id>
+    <calories>324</calories>
+  </Dish>
+  <Dish>
+    <id>3</id>
+    <name>жаркое из телятины</name>
+    <category_id>3</category_id>
+    <calories>192</calories>
+  </Dish>
+</ArrayOfDish>

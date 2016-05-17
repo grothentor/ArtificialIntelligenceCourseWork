@@ -20,9 +20,24 @@ namespace ArtificialIntelligenceCourseWork
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Dishes dishes { set; get; }
+        private DishCategories dishCategories { set; get; }
         public MainWindow()
         {
             InitializeComponent();
+            dishes = new Dishes();
+            dishCategories = new DishCategories();
+        }
+
+        private void AddCategory_Click(object sender, RoutedEventArgs e)
+        {
+            AddCategory window = new AddCategory(dishCategories);
+            window.ShowDialog();
+        }
+        private void AddDish_Click(object sender, RoutedEventArgs e)
+        {
+            AddDish window = new AddDish(dishes, dishCategories);
+            window.ShowDialog();
         }
     }
 }
