@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfEatVariant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EatVariant>
+    <id>1</id>
+    <name>Перекусить</name>
+    <startPoint>50</startPoint>
+    <endPoint>300</endPoint>
+  </EatVariant>
+  <EatVariant>
+    <id>2</id>
+    <name>Покушать</name>
+    <startPoint>250</startPoint>
+    <endPoint>600</endPoint>
+  </EatVariant>
+  <EatVariant>
+    <id>3</id>
+    <name>От души поесть</name>
+    <startPoint>500</startPoint>
+    <endPoint>1000</endPoint>
+  </EatVariant>
+</ArrayOfEatVariant>
