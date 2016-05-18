@@ -1,0 +1,22 @@
+﻿<Window x:Class="ArtificialIntelligenceCourseWork.RedactVariable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование значения" Height="239.333" Width="370" ResizeMode="NoResize">
+    <Grid Name="MainGrid">
+        <ComboBox Name="VariableCb" HorizontalAlignment="Left" Margin="181,10,0,0" VerticalAlignment="Top" Width="171" Height="26" SelectionChanged="Variable_SelectionChanged"/>
+        <Label Content="Название:" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top"/>
+        <Label Content="Редактируемая переменная:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="NameTb" HorizontalAlignment="Left" Height="23" Margin="80,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272"/>
+        <Label Content="Точки:" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top"/>
+        <Label Content="1-я:" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="StartPoint" HorizontalAlignment="Left" Height="26" Margin="45,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <Label Content="2-я:" HorizontalAlignment="Left" Margin="189,104,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="SecondPoint" HorizontalAlignment="Left" Height="26" Margin="219,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <Label Content="3-я:" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="ThirdPoint" HorizontalAlignment="Left" Height="26" Margin="45,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <Label Content="4-я:" HorizontalAlignment="Left" Margin="189,135,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="EndPoint" HorizontalAlignment="Left" Height="26" Margin="219,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <Button Click="Save_Click" Content="Сохранить" HorizontalAlignment="Center" Margin="0,177,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

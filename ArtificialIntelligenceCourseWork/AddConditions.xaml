@@ -1,0 +1,19 @@
+﻿<Window x:Class="ArtificialIntelligenceCourseWork.AddConditions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddConditions" Height="309" Width="1089.333">
+    <Grid>
+        <Grid Name="ConditionsGrid" Margin="0,0,0,34">
+            <Label Name="eatVariant1"  Content="Если клиенты хотят:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label Name="peopleCount1" Content="И клиентов:" HorizontalAlignment="Left" Margin="313,10,0,0" VerticalAlignment="Top"/>
+            <Label Name="eatCount1"  Content="ТО Нужно приготовить:" HorizontalAlignment="Left" Margin="625,10,0,0" VerticalAlignment="Top"/>
+            <!--<Label Name="lastWord1"  Content="еды." HorizontalAlignment="Left" Margin="1002,10,0,0" VerticalAlignment="Top"/>-->
+            <ComboBox Name="eatVariantes1" Margin="128,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="185"  Height="26"/>
+            <ComboBox Name="peopleCounts1" Margin="389,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236"  Height="26"/>
+            <ComboBox Name="eatCounts1" Margin="766,10,-50,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236"  Height="26"/>
+            <Button Content="+" Click="AddNewItems_Click" HorizontalAlignment="Left" Margin="1036,3,0,0" VerticalAlignment="Top" Width="15" Height="19" Padding="0" RenderTransformOrigin="1.2,0.421"/>
+            <Button Name="DelCon1" Content="-" HorizontalAlignment="Left" Margin="1036,22,0,0" VerticalAlignment="Top" Width="15" Height="17" Padding="0"/>
+        </Grid>
+        <Button Content="Сохранить" HorizontalAlignment="Center" Height="23" Margin="498,249,513,-28" VerticalAlignment="Top" Width="70" Click="Save_Click"/>
+    </Grid>
+</Window>

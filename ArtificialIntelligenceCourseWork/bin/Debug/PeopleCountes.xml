@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVariable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Variable>
+    <id>1</id>
+    <name>Мало</name>
+    <chart>
+      <startPoint>1</startPoint>
+      <secondPoint>1</secondPoint>
+      <thirdPoint>3</thirdPoint>
+      <endPoint>3</endPoint>
+    </chart>
+  </Variable>
+  <Variable>
+    <id>2</id>
+    <name>Компания</name>
+    <chart>
+      <startPoint>3</startPoint>
+      <secondPoint>4</secondPoint>
+      <thirdPoint>10</thirdPoint>
+      <endPoint>12</endPoint>
+    </chart>
+  </Variable>
+  <Variable>
+    <id>3</id>
+    <name>Банкет</name>
+    <chart>
+      <startPoint>10</startPoint>
+      <secondPoint>12</secondPoint>
+      <thirdPoint>20</thirdPoint>
+      <endPoint>20</endPoint>
+    </chart>
+  </Variable>
+</ArrayOfVariable>

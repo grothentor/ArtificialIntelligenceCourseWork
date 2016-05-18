@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVariable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Variable>
+    <id>1</id>
+    <name>Чуть-чуть</name>
+    <chart>
+      <startPoint>50</startPoint>
+      <secondPoint>200</secondPoint>
+      <thirdPoint>700</thirdPoint>
+      <endPoint>900</endPoint>
+    </chart>
+  </Variable>
+  <Variable>
+    <id>2</id>
+    <name>Мало</name>
+    <chart>
+      <startPoint>400</startPoint>
+      <secondPoint>800</secondPoint>
+      <thirdPoint>1500</thirdPoint>
+      <endPoint>2000</endPoint>
+    </chart>
+  </Variable>
+  <Variable>
+    <id>3</id>
+    <name>Средне</name>
+    <chart>
+      <startPoint>1500</startPoint>
+      <secondPoint>1800</secondPoint>
+      <thirdPoint>4000</thirdPoint>
+      <endPoint>6000</endPoint>
+    </chart>
+  </Variable>
+  <Variable>
+    <id>4</id>
+    <name>Много</name>
+    <chart>
+      <startPoint>4000</startPoint>
+      <secondPoint>6000</secondPoint>
+      <thirdPoint>9000</thirdPoint>
+      <endPoint>12000</endPoint>
+    </chart>
+  </Variable>
+  <Variable>
+    <id>5</id>
+    <name>Очень много</name>
+    <chart>
+      <startPoint>10000</startPoint>
+      <secondPoint>13000</secondPoint>
+      <thirdPoint>20000</thirdPoint>
+      <endPoint>20000</endPoint>
+    </chart>
+  </Variable>
+</ArrayOfVariable>
