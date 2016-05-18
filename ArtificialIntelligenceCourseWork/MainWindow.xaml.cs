@@ -24,32 +24,35 @@ namespace ArtificialIntelligenceCourseWork
         private DishCategories dishCategories { set; get; }
         private EatVariantes eatVariantes { set; get; }
         private PereferenceData pereferenceData { set; get; }
-        
+        private PeopleCountes peopleCountes { set; get; }
+        private EatCountes eatCountes { set; get; }
+        private Conditions conditions { set; get; }
+        private double calories { set; get; }
+        private double peopleCount { set; get; }
         public MainWindow()
         {
             InitializeComponent();
 
+            calories = 0;
+            peopleCount = 0;
             dishes = new Dishes();
             dishCategories = new DishCategories();
             eatVariantes = new EatVariantes();
+            peopleCountes = new PeopleCountes();
+            eatCountes = new EatCountes();
+            conditions = new Conditions();
             pereferenceData = null;
-            generateFields();
-        }
-        public void generateFields()
-        {
-            generateEatVariants();
-            generateCategories();
         }
         public void generateEatVariants()
         {
             int radioHeight = 23, i = 0;
-            foreach (EatVariant eatVariant in eatVariantes.eatVariantes)
+            foreach (Variable eatVariant in eatVariantes.variables)
             {
                 eatVariantsGb.Children.Add(createRadioButton(eatVariant.name, 10, radioHeight * i, check: i == 0));
                 i++;
             }
         }
-        public void generateCategories()
+        /*public void generateCategories()
         {
             int checkHeight = 23, i = 0;
             foreach (DishCategory dishCategory in dishCategories.categories)
@@ -61,13 +64,13 @@ namespace ArtificialIntelligenceCourseWork
         public void readFromFields()
         {
             List<DishCategory> dishCategories = new List<DishCategory>(){};
-            EatVariant eatVariant = new EatVariant();
+            Variable eatVariant = new Variable();
             foreach(RadioButton radioButton in eatVariantsGb.Children.OfType<RadioButton>())
                 if ((bool) radioButton.IsChecked) eatVariant = this.eatVariantes.get(radioButton.Content.ToString());
             foreach(CheckBox checkBox in categoriesGb.Children.OfType<CheckBox>())
                 if ((bool)checkBox.IsChecked) dishCategories.Add(this.dishCategories.get(checkBox.Content.ToString()));
             pereferenceData = new PereferenceData(eatVariant, int.Parse(peopleCountTb.Text), dishCategories.ToArray());
-        }
+        }*/
         public CheckBox createCheckBox(string text, int left, int top)
         {
             return new CheckBox() { 
@@ -99,10 +102,52 @@ namespace ArtificialIntelligenceCourseWork
             AddDish window = new AddDish(dishes, dishCategories);
             window.ShowDialog();
         }
-
         private void Calculate(object sender, RoutedEventArgs e)
         {
-            readFromFields();
+            calories = double.Parse(caloriesTb.Text);
+            peopleCount = double.Parse(peopleCountTb.Text);
+            fazzyfication();
+        }
+        private void fazzyfication()
+        {
+            double[] conditionValue = new double[conditions.count()];
+            for (int i = 0; i < conditions.count(); i++)
+                conditionValue[i] = Math.Min(
+                    conditions.variables[i].eatVariant.chart.find(calories), 
+                    conditions.variables[i].peopleCount.chart.find(peopleCount));
+            int index = 0;
+            double maxValue = conditionValue[0];
+            for (int i = 1; i < conditionValue.Length; i++)
+                if (maxValue < conditionValue[i])
+                {
+                    maxValue = conditionValue[i];
+                    index = i;
+                }
+            double result1 = maxValue * conditions.variables[index].eatCount.chart.secondPoint,
+                result2 = maxValue * conditions.variables[index].eatCount.chart.thirdPoint;
+            MessageBox.Show("Методом крайней левой точки, найдено:" + result1 +
+                    "\nМетодом крайней правой точки, найдено:" + result2);
+        }
+        private void RedactEatCategores_Click(object sender, RoutedEventArgs e)
+        {
+            RedactVariable window = new RedactVariable(eatVariantes);
+            window.ShowDialog();
+        }
+        private void RedactEatCountes_Click(object sender, RoutedEventArgs e)
+        {
+            RedactVariable window = new RedactVariable(eatCountes);
+            window.ShowDialog();
+        }
+        private void RedactPeopleCountes_Click(object sender, RoutedEventArgs e)
+        {
+            RedactVariable window = new RedactVariable(peopleCountes);
+            window.ShowDialog();
+        }
+
+        private void AddConditions_Click(object sender, RoutedEventArgs e)
+        {
+            AddConditions window = new AddConditions(eatVariantes, peopleCountes, eatCountes);
+            window.ShowDialog();
         }
     }
 }

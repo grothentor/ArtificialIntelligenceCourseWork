@@ -8,6 +8,90 @@ using System.IO;
 
 namespace ArtificialIntelligenceCourseWork
 {
+    public class DataTemplate<T>
+    {
+        private string fileName = "DataTemplate.xml";
+        public T[] variables { set; get; }
+        public DataTemplate(string fileName)
+        {
+            this.fileName = fileName;
+            try
+            {
+                XmlSerializer ser = new XmlSerializer(typeof(T[]));
+                FileStream file = new FileStream(fileName, FileMode.Open);
+                variables = (T[])ser.Deserialize(file);
+                file.Close();
+            }
+            catch
+            {
+                variables = new T[] { };
+            }
+        }
+        public void save()
+        {
+            XmlSerializer ser = new XmlSerializer(typeof(T[]));
+            TextWriter writer = new StreamWriter(fileName);
+            ser.Serialize(writer, variables);
+            writer.Close();
+        }
+        public int getNewId()
+        {
+            return variables.Length + 1;
+        }
+        public void add(string name, params double[] points)
+        {
+            Variable variable = new Variable(this.getNewId(), name, points);
+            this.add((T)Convert.ChangeType(variable, typeof(T)));
+        }
+        public void add(Variable eatVariant, Variable eatCount, Variable peopleCount)
+        {
+            this.add((T)Convert.ChangeType(new Condition(eatVariant, eatCount, peopleCount), typeof(T)));
+        }
+        public void add(T newVariable)
+        {
+            T[] variables = (T[])this.variables.Clone();
+            Array.Resize(ref variables, variables.Length + 1);
+            variables[this.variables.Length] = newVariable;
+            this.variables = (T[])variables.Clone();
+            save();
+        }
+        public bool checkName(string name)
+        {
+            if (typeof(T) == typeof(Variable))
+            {
+                Variable[] newVariables = variables as Variable[];
+                foreach (Variable variable in newVariables)
+                    if (name.ToLower() == variable.name.ToLower()) return false;
+            }
+            return true;
+        }
+        public int count()
+        {
+            return variables.Length;
+        }
+        public Variable get(string name)
+        {
+            if (typeof(T) == typeof(Variable))
+            {
+                Variable[] newVariables = variables as Variable[];
+                foreach (Variable variable in newVariables)
+                    if (variable.name == name) return variable;
+            }
+            return null;
+        }
+        public List<string> getNamesList()
+        {
+            List<string> names = new List<string>();
+            if (typeof(T) == typeof(Variable))
+            {
+                Variable[] newVariables = variables as Variable[];
+                foreach (Variable variable in newVariables)
+                    names.Add(variable.name);
+                return names;
+            }
+            return null;
+        }
+    }
     [Serializable]
     public class DishCategory
     {
@@ -127,85 +211,50 @@ namespace ArtificialIntelligenceCourseWork
             this.calories = calories;
         }
     }
-    public class EatVariant
+    [Serializable]
+    public class Variable
     {
         public int id { set; get; }
         public string name { set; get; }
-        public int startPoint { set; get; }
-        public int endPoint { set; get; }
-        public EatVariant()
+        public Chart chart { set; get; }
+        public Variable()
         {
             id = 0;
             name = "";
-            startPoint = 0;
-            endPoint = 0;
+            chart = new Chart();
         }
-        public EatVariant(int id, string name, int startPoint, int endPoint)
+        public Variable(int id, string name, params double[] points)
         {
             this.id = id;
             this.name = name;
-            this.startPoint = startPoint;
-            this.endPoint = endPoint;
+            this.chart = new Chart(points);
         }
     }
-    public class EatVariantes
+    public class PeopleCountes : DataTemplate<Variable>
     {
-        private static string fileName = "EatVariantes.xml";
-        public EatVariant[] eatVariantes { set; get; }
-        public EatVariantes()
+        public PeopleCountes()
+            : base("PeopleCountes.xml")
         {
-            try
-            {
-                XmlSerializer ser = new XmlSerializer(typeof(EatVariant[]));
-                FileStream file = new FileStream(fileName, FileMode.Open);
-                eatVariantes = (EatVariant[])ser.Deserialize(file);
-                file.Close();
-            }
-            catch
-            {
-                eatVariantes = new EatVariant[] { };
-            }
-        }
-        public void save()
-        {
-            XmlSerializer ser = new XmlSerializer(typeof(EatVariant[]));
-            TextWriter writer = new StreamWriter(fileName);
-            ser.Serialize(writer, eatVariantes);
-            writer.Close();
-        }
-        public int getNewId()
-        {
-            return eatVariantes.Length + 1;
-        }
-        public void add(string name, int startPoint, int endPoint)
-        {
-            this.add(new EatVariant(this.getNewId(), name, startPoint, endPoint));
-        }
-        public void add(EatVariant newEatVariant)
-        {
-            EatVariant[] eatVariantes = (EatVariant[])this.eatVariantes.Clone();
-            Array.Resize(ref eatVariantes, eatVariantes.Length + 1);
-            eatVariantes[this.eatVariantes.Length] = newEatVariant;
-            this.eatVariantes = (EatVariant[])eatVariantes.Clone();
-            save();
-        }
-        public bool checkName(string name)
-        {
-            foreach (EatVariant eatVariant in eatVariantes)
-                if (name.ToLower() == eatVariant.name.ToLower()) return false;
-            return true;
-        }
-        public int count()
-        {
-            return eatVariantes.Length;
-        }
-        public EatVariant get(string name)
-        {
-            foreach (EatVariant eatVariant in eatVariantes)
-                if (eatVariant.name == name) return eatVariant;
-            return null;
+
         }
     }
+    public class EatVariantes : DataTemplate<Variable>
+    {
+        public EatVariantes()
+            : base("EatVariantes.xml")
+        {
+
+        }
+    }
+    public class EatCountes : DataTemplate<Variable>
+    {
+        public EatCountes()
+            : base("EatCountes.xml")
+        {
+
+        }
+    }
+   
     public class Dishes
     {
         private static string fileName = "Dishes.xml";
@@ -261,7 +310,7 @@ namespace ArtificialIntelligenceCourseWork
     public class PereferenceData
     {
         public DishCategory[] dishCategories { set; get; }
-        public EatVariant eatVariant { set; get; }
+        public Variable eatVariant { set; get; }
         public int peopleNumber { set; get; }
         public PereferenceData()
         {
@@ -269,11 +318,36 @@ namespace ArtificialIntelligenceCourseWork
             eatVariant = null;
             peopleNumber = 0;
         }
-        public PereferenceData(EatVariant eatVariant, int peopleNumber, params DishCategory[] dishCategories)
+        public PereferenceData(Variable eatVariant, int peopleNumber, params DishCategory[] dishCategories)
         {
             this.eatVariant = eatVariant;
             this.dishCategories = dishCategories;
             this.peopleNumber = peopleNumber;
         }
+    }
+    [Serializable]
+    public class Condition
+    {
+        public Variable eatVariant { set; get; }
+        public Variable peopleCount { set; get; }
+        public Variable eatCount { set; get; }
+        public Condition()
+        {
+            eatCount = new Variable();
+            eatVariant = new Variable();
+            peopleCount = new Variable();
+        }
+        public Condition(Variable eatVariant, Variable eatCount, Variable peopleCount)
+        {
+            this.eatCount = eatCount;
+            this.eatVariant = eatVariant;
+            this.peopleCount = peopleCount;
+        }
+    }
+    public class Conditions : DataTemplate<Condition>
+    {
+        public Conditions() : base("Conditions.xml") { 
+
+}
     }
 }

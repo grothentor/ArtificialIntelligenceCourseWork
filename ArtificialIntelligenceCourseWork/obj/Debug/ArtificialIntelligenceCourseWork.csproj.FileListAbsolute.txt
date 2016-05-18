@@ -15,3 +15,7 @@ D:\Study\Programming\Projects\ArtificialIntelligenceCourseWork\ArtificialIntelli
 D:\Study\Programming\Projects\ArtificialIntelligenceCourseWork\ArtificialIntelligenceCourseWork\bin\Debug\ArtificialIntelligenceCourseWork.pdb
 D:\Study\Programming\Projects\ArtificialIntelligenceCourseWork\ArtificialIntelligenceCourseWork\obj\Debug\ArtificialIntelligenceCourseWork.exe
 D:\Study\Programming\Projects\ArtificialIntelligenceCourseWork\ArtificialIntelligenceCourseWork\obj\Debug\ArtificialIntelligenceCourseWork.pdb
+D:\Study\Programming\Projects\ArtificialIntelligenceCourseWork\ArtificialIntelligenceCourseWork\obj\Debug\RedactVariable.baml
+D:\Study\Programming\Projects\ArtificialIntelligenceCourseWork\ArtificialIntelligenceCourseWork\obj\Debug\RedactVariable.g.cs
+D:\Study\Programming\Projects\ArtificialIntelligenceCourseWork\ArtificialIntelligenceCourseWork\obj\Debug\AddConditions.baml
+D:\Study\Programming\Projects\ArtificialIntelligenceCourseWork\ArtificialIntelligenceCourseWork\obj\Debug\AddConditions.g.cs
