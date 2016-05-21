@@ -125,8 +125,8 @@ namespace ArtificialIntelligenceCourseWork
                 }
             double result1 = maxValue * conditions.variables[index].eatCount.chart.secondPoint,
                 result2 = maxValue * conditions.variables[index].eatCount.chart.thirdPoint;
-            MessageBox.Show("Методом крайней левой точки, найдено:" + result1 +
-                    "\nМетодом крайней правой точки, найдено:" + result2);
+            MessageBox.Show("Методом левого модального значения, найдено:" + result1 +
+                    "\nМетодом правого модального значения, найдено:" + result2);
         }
         private void RedactEatCategores_Click(object sender, RoutedEventArgs e)
         {

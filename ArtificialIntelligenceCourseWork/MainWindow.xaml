@@ -7,7 +7,7 @@
             <MenuItem Header="Данные">
                 <MenuItem Header="Сытность еды" Click="RedactEatCategores_Click"/>
                 <MenuItem Header="Количество людей" Click="RedactPeopleCountes_Click"/>
-                <MenuItem Header="Количество ды" Click="RedactEatCountes_Click"/>
+                <MenuItem Header="Количество еды" Click="RedactEatCountes_Click"/>
                 <!--<MenuItem Header="Блюда" Click="AddDish_Click"/>
                 <MenuItem Header="Категории" Click="AddCategory_Click"/>
                 <MenuItem Header="Сытость"/>-->
