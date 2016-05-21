@@ -123,8 +123,8 @@ namespace ArtificialIntelligenceCourseWork
                     maxValue = conditionValue[i];
                     index = i;
                 }
-            double result1 = maxValue * conditions.variables[index].eatCount.chart.secondPoint,
-                result2 = maxValue * conditions.variables[index].eatCount.chart.thirdPoint;
+            double result1 = conditions.variables[index].eatCount.chart.findReverse(maxValue),
+                result2 = conditions.variables[index].eatCount.chart.findReverse(maxValue, false);
             MessageBox.Show("Методом левого модального значения, найдено:" + result1 +
                     "\nМетодом правого модального значения, найдено:" + result2);
         }

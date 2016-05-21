@@ -58,5 +58,11 @@ namespace ArtificialIntelligenceCourseWork
             else if (point < secondPoint) return (point - startPoint) / (secondPoint - startPoint);
             else return (endPoint - point) / (endPoint - thirdPoint);
         }
+        public double findReverse(double point, bool left = true)
+        {
+            if (point < 0 || point > 1) return -1;
+            else if (point == 1) return left ? secondPoint : thirdPoint;
+            else return left ? startPoint + point * (secondPoint - startPoint) : endPoint - point * (secondPoint - startPoint);
+        }
     }
 }
