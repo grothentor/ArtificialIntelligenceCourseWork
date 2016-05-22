@@ -2,32 +2,32 @@
 <ArrayOfVariable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Variable>
     <id>1</id>
-    <name>Перекусить</name>
+    <name>Маленькая</name>
     <chart>
       <startPoint>50</startPoint>
-      <secondPoint>100</secondPoint>
-      <thirdPoint>250</thirdPoint>
-      <endPoint>300</endPoint>
+      <secondPoint>200</secondPoint>
+      <thirdPoint>500</thirdPoint>
+      <endPoint>700</endPoint>
     </chart>
   </Variable>
   <Variable>
     <id>2</id>
-    <name>Покушать</name>
+    <name>Средняя</name>
     <chart>
-      <startPoint>250</startPoint>
-      <secondPoint>300</secondPoint>
-      <thirdPoint>550</thirdPoint>
-      <endPoint>600</endPoint>
+      <startPoint>600</startPoint>
+      <secondPoint>800</secondPoint>
+      <thirdPoint>2000</thirdPoint>
+      <endPoint>2200</endPoint>
     </chart>
   </Variable>
   <Variable>
     <id>3</id>
-    <name>От души поесть</name>
+    <name>Высокая</name>
     <chart>
-      <startPoint>550</startPoint>
-      <secondPoint>600</secondPoint>
-      <thirdPoint>850</thirdPoint>
-      <endPoint>1000</endPoint>
+      <startPoint>2000</startPoint>
+      <secondPoint>2300</secondPoint>
+      <thirdPoint>4000</thirdPoint>
+      <endPoint>4001</endPoint>
     </chart>
   </Variable>
 </ArrayOfVariable>

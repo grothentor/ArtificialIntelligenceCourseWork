@@ -12,7 +12,7 @@
   </Variable>
   <Variable>
     <id>2</id>
-    <name>Компания</name>
+    <name>Офис</name>
     <chart>
       <startPoint>3</startPoint>
       <secondPoint>4</secondPoint>
@@ -22,12 +22,12 @@
   </Variable>
   <Variable>
     <id>3</id>
-    <name>Банкет</name>
+    <name>Цех</name>
     <chart>
       <startPoint>10</startPoint>
       <secondPoint>12</secondPoint>
-      <thirdPoint>20</thirdPoint>
-      <endPoint>20</endPoint>
+      <thirdPoint>25</thirdPoint>
+      <endPoint>25</endPoint>
     </chart>
   </Variable>
 </ArrayOfVariable>

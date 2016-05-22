@@ -3,12 +3,12 @@
   <Condition>
     <eatVariant>
       <id>1</id>
-      <name>Перекусить</name>
+      <name>Маленькая</name>
       <chart>
         <startPoint>50</startPoint>
-        <secondPoint>100</secondPoint>
-        <thirdPoint>250</thirdPoint>
-        <endPoint>300</endPoint>
+        <secondPoint>200</secondPoint>
+        <thirdPoint>500</thirdPoint>
+        <endPoint>700</endPoint>
       </chart>
     </eatVariant>
     <peopleCount>
@@ -22,62 +22,30 @@
       </chart>
     </peopleCount>
     <eatCount>
-      <id>1</id>
-      <name>Чуть-чуть</name>
-      <chart>
-        <startPoint>50</startPoint>
-        <secondPoint>200</secondPoint>
-        <thirdPoint>700</thirdPoint>
-        <endPoint>900</endPoint>
-      </chart>
-    </eatCount>
-  </Condition>
-  <Condition>
-    <eatVariant>
       <id>2</id>
-      <name>Покушать</name>
+      <name>Дешевая</name>
       <chart>
-        <startPoint>250</startPoint>
-        <secondPoint>300</secondPoint>
-        <thirdPoint>550</thirdPoint>
+        <startPoint>10</startPoint>
+        <secondPoint>100</secondPoint>
+        <thirdPoint>450</thirdPoint>
         <endPoint>600</endPoint>
       </chart>
-    </eatVariant>
-    <peopleCount>
-      <id>1</id>
-      <name>Мало</name>
-      <chart>
-        <startPoint>1</startPoint>
-        <secondPoint>1</secondPoint>
-        <thirdPoint>3</thirdPoint>
-        <endPoint>3</endPoint>
-      </chart>
-    </peopleCount>
-    <eatCount>
-      <id>1</id>
-      <name>Чуть-чуть</name>
-      <chart>
-        <startPoint>50</startPoint>
-        <secondPoint>200</secondPoint>
-        <thirdPoint>700</thirdPoint>
-        <endPoint>900</endPoint>
-      </chart>
     </eatCount>
   </Condition>
   <Condition>
     <eatVariant>
       <id>1</id>
-      <name>Перекусить</name>
+      <name>Маленькая</name>
       <chart>
         <startPoint>50</startPoint>
-        <secondPoint>100</secondPoint>
-        <thirdPoint>250</thirdPoint>
-        <endPoint>300</endPoint>
+        <secondPoint>200</secondPoint>
+        <thirdPoint>500</thirdPoint>
+        <endPoint>700</endPoint>
       </chart>
     </eatVariant>
     <peopleCount>
       <id>2</id>
-      <name>Компания</name>
+      <name>Офис</name>
       <chart>
         <startPoint>3</startPoint>
         <secondPoint>4</secondPoint>
@@ -87,61 +55,93 @@
     </peopleCount>
     <eatCount>
       <id>2</id>
-      <name>Мало</name>
+      <name>Дешевая</name>
       <chart>
-        <startPoint>400</startPoint>
-        <secondPoint>800</secondPoint>
-        <thirdPoint>1500</thirdPoint>
-        <endPoint>2000</endPoint>
+        <startPoint>10</startPoint>
+        <secondPoint>100</secondPoint>
+        <thirdPoint>450</thirdPoint>
+        <endPoint>600</endPoint>
       </chart>
     </eatCount>
   </Condition>
   <Condition>
     <eatVariant>
       <id>1</id>
-      <name>Перекусить</name>
+      <name>Маленькая</name>
       <chart>
         <startPoint>50</startPoint>
-        <secondPoint>100</secondPoint>
-        <thirdPoint>250</thirdPoint>
-        <endPoint>300</endPoint>
+        <secondPoint>200</secondPoint>
+        <thirdPoint>500</thirdPoint>
+        <endPoint>700</endPoint>
       </chart>
     </eatVariant>
     <peopleCount>
       <id>3</id>
-      <name>Банкет</name>
+      <name>Цех</name>
       <chart>
         <startPoint>10</startPoint>
         <secondPoint>12</secondPoint>
-        <thirdPoint>20</thirdPoint>
-        <endPoint>20</endPoint>
+        <thirdPoint>25</thirdPoint>
+        <endPoint>25</endPoint>
       </chart>
     </peopleCount>
     <eatCount>
-      <id>2</id>
-      <name>Мало</name>
+      <id>3</id>
+      <name>Оптимальная</name>
       <chart>
-        <startPoint>400</startPoint>
-        <secondPoint>800</secondPoint>
-        <thirdPoint>1500</thirdPoint>
-        <endPoint>2000</endPoint>
+        <startPoint>500</startPoint>
+        <secondPoint>600</secondPoint>
+        <thirdPoint>2300</thirdPoint>
+        <endPoint>2500</endPoint>
       </chart>
     </eatCount>
   </Condition>
   <Condition>
     <eatVariant>
       <id>2</id>
-      <name>Покушать</name>
+      <name>Средняя</name>
       <chart>
-        <startPoint>250</startPoint>
-        <secondPoint>300</secondPoint>
-        <thirdPoint>550</thirdPoint>
+        <startPoint>600</startPoint>
+        <secondPoint>800</secondPoint>
+        <thirdPoint>2000</thirdPoint>
+        <endPoint>2200</endPoint>
+      </chart>
+    </eatVariant>
+    <peopleCount>
+      <id>1</id>
+      <name>Мало</name>
+      <chart>
+        <startPoint>1</startPoint>
+        <secondPoint>1</secondPoint>
+        <thirdPoint>3</thirdPoint>
+        <endPoint>3</endPoint>
+      </chart>
+    </peopleCount>
+    <eatCount>
+      <id>2</id>
+      <name>Дешевая</name>
+      <chart>
+        <startPoint>10</startPoint>
+        <secondPoint>100</secondPoint>
+        <thirdPoint>450</thirdPoint>
         <endPoint>600</endPoint>
+      </chart>
+    </eatCount>
+  </Condition>
+  <Condition>
+    <eatVariant>
+      <id>2</id>
+      <name>Средняя</name>
+      <chart>
+        <startPoint>600</startPoint>
+        <secondPoint>800</secondPoint>
+        <thirdPoint>2000</thirdPoint>
+        <endPoint>2200</endPoint>
       </chart>
     </eatVariant>
     <peopleCount>
       <id>2</id>
-      <name>Компания</name>
+      <name>Офис</name>
       <chart>
         <startPoint>3</startPoint>
         <secondPoint>4</secondPoint>
@@ -151,88 +151,56 @@
     </peopleCount>
     <eatCount>
       <id>3</id>
-      <name>Средне</name>
+      <name>Оптимальная</name>
       <chart>
-        <startPoint>1500</startPoint>
-        <secondPoint>1800</secondPoint>
+        <startPoint>500</startPoint>
+        <secondPoint>600</secondPoint>
+        <thirdPoint>2300</thirdPoint>
+        <endPoint>2500</endPoint>
+      </chart>
+    </eatCount>
+  </Condition>
+  <Condition>
+    <eatVariant>
+      <id>2</id>
+      <name>Средняя</name>
+      <chart>
+        <startPoint>600</startPoint>
+        <secondPoint>800</secondPoint>
+        <thirdPoint>2000</thirdPoint>
+        <endPoint>2200</endPoint>
+      </chart>
+    </eatVariant>
+    <peopleCount>
+      <id>3</id>
+      <name>Цех</name>
+      <chart>
+        <startPoint>10</startPoint>
+        <secondPoint>12</secondPoint>
+        <thirdPoint>25</thirdPoint>
+        <endPoint>25</endPoint>
+      </chart>
+    </peopleCount>
+    <eatCount>
+      <id>3</id>
+      <name>Оптимальная</name>
+      <chart>
+        <startPoint>500</startPoint>
+        <secondPoint>600</secondPoint>
+        <thirdPoint>2300</thirdPoint>
+        <endPoint>2500</endPoint>
+      </chart>
+    </eatCount>
+  </Condition>
+  <Condition>
+    <eatVariant>
+      <id>3</id>
+      <name>Высокая</name>
+      <chart>
+        <startPoint>2000</startPoint>
+        <secondPoint>2300</secondPoint>
         <thirdPoint>4000</thirdPoint>
-        <endPoint>6000</endPoint>
-      </chart>
-    </eatCount>
-  </Condition>
-  <Condition>
-    <eatVariant>
-      <id>3</id>
-      <name>От души поесть</name>
-      <chart>
-        <startPoint>550</startPoint>
-        <secondPoint>600</secondPoint>
-        <thirdPoint>850</thirdPoint>
-        <endPoint>1000</endPoint>
-      </chart>
-    </eatVariant>
-    <peopleCount>
-      <id>2</id>
-      <name>Компания</name>
-      <chart>
-        <startPoint>3</startPoint>
-        <secondPoint>4</secondPoint>
-        <thirdPoint>10</thirdPoint>
-        <endPoint>12</endPoint>
-      </chart>
-    </peopleCount>
-    <eatCount>
-      <id>4</id>
-      <name>Много</name>
-      <chart>
-        <startPoint>4000</startPoint>
-        <secondPoint>6000</secondPoint>
-        <thirdPoint>9000</thirdPoint>
-        <endPoint>12000</endPoint>
-      </chart>
-    </eatCount>
-  </Condition>
-  <Condition>
-    <eatVariant>
-      <id>3</id>
-      <name>От души поесть</name>
-      <chart>
-        <startPoint>550</startPoint>
-        <secondPoint>600</secondPoint>
-        <thirdPoint>850</thirdPoint>
-        <endPoint>1000</endPoint>
-      </chart>
-    </eatVariant>
-    <peopleCount>
-      <id>3</id>
-      <name>Банкет</name>
-      <chart>
-        <startPoint>10</startPoint>
-        <secondPoint>12</secondPoint>
-        <thirdPoint>20</thirdPoint>
-        <endPoint>20</endPoint>
-      </chart>
-    </peopleCount>
-    <eatCount>
-      <id>5</id>
-      <name>Очень много</name>
-      <chart>
-        <startPoint>10000</startPoint>
-        <secondPoint>13000</secondPoint>
-        <thirdPoint>20000</thirdPoint>
-        <endPoint>20000</endPoint>
-      </chart>
-    </eatCount>
-  </Condition>
-  <Condition>
-    <eatVariant>
-      <id>3</id>
-      <name>От души поесть</name>
-      <chart>
-        <startPoint>550</startPoint>
-        <secondPoint>600</secondPoint>
-        <thirdPoint>850</thirdPoint>
-        <endPoint>1000</endPoint>
+        <endPoint>4001</endPoint>
       </chart>
     </eatVariant>
     <peopleCount>
@@ -246,45 +214,77 @@
       </chart>
     </peopleCount>
     <eatCount>
-      <id>2</id>
-      <name>Мало</name>
+      <id>3</id>
+      <name>Оптимальная</name>
       <chart>
-        <startPoint>400</startPoint>
-        <secondPoint>800</secondPoint>
-        <thirdPoint>1500</thirdPoint>
-        <endPoint>2000</endPoint>
+        <startPoint>500</startPoint>
+        <secondPoint>600</secondPoint>
+        <thirdPoint>2300</thirdPoint>
+        <endPoint>2500</endPoint>
       </chart>
     </eatCount>
   </Condition>
   <Condition>
     <eatVariant>
-      <id>2</id>
-      <name>Покушать</name>
+      <id>3</id>
+      <name>Высокая</name>
       <chart>
-        <startPoint>250</startPoint>
-        <secondPoint>300</secondPoint>
-        <thirdPoint>550</thirdPoint>
-        <endPoint>600</endPoint>
+        <startPoint>2000</startPoint>
+        <secondPoint>2300</secondPoint>
+        <thirdPoint>4000</thirdPoint>
+        <endPoint>4001</endPoint>
       </chart>
     </eatVariant>
     <peopleCount>
-      <id>3</id>
-      <name>Банкет</name>
+      <id>2</id>
+      <name>Офис</name>
       <chart>
-        <startPoint>10</startPoint>
-        <secondPoint>12</secondPoint>
-        <thirdPoint>20</thirdPoint>
-        <endPoint>20</endPoint>
+        <startPoint>3</startPoint>
+        <secondPoint>4</secondPoint>
+        <thirdPoint>10</thirdPoint>
+        <endPoint>12</endPoint>
       </chart>
     </peopleCount>
     <eatCount>
       <id>4</id>
-      <name>Много</name>
+      <name>Большая</name>
       <chart>
-        <startPoint>4000</startPoint>
-        <secondPoint>6000</secondPoint>
-        <thirdPoint>9000</thirdPoint>
-        <endPoint>12000</endPoint>
+        <startPoint>2200</startPoint>
+        <secondPoint>2400</secondPoint>
+        <thirdPoint>6200</thirdPoint>
+        <endPoint>6200</endPoint>
+      </chart>
+    </eatCount>
+  </Condition>
+  <Condition>
+    <eatVariant>
+      <id>3</id>
+      <name>Высокая</name>
+      <chart>
+        <startPoint>2000</startPoint>
+        <secondPoint>2300</secondPoint>
+        <thirdPoint>4000</thirdPoint>
+        <endPoint>4001</endPoint>
+      </chart>
+    </eatVariant>
+    <peopleCount>
+      <id>3</id>
+      <name>Цех</name>
+      <chart>
+        <startPoint>10</startPoint>
+        <secondPoint>12</secondPoint>
+        <thirdPoint>25</thirdPoint>
+        <endPoint>25</endPoint>
+      </chart>
+    </peopleCount>
+    <eatCount>
+      <id>4</id>
+      <name>Большая</name>
+      <chart>
+        <startPoint>2200</startPoint>
+        <secondPoint>2400</secondPoint>
+        <thirdPoint>6200</thirdPoint>
+        <endPoint>6200</endPoint>
       </chart>
     </eatCount>
   </Condition>
